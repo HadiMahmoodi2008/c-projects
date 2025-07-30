@@ -10,15 +10,15 @@ for(int i = 1; i < argc; i++)
     if (found != NULL) 
     {
         size_t len_left = found - argv[i];
-        char left_part[6];
+        char left_part[12];
         strncpy(left_part, argv[i], len_left);
-        //left_part[len_left] = '\0';
+        left_part[len_left] = '\0';
 
         char op = *found;
 
-        char right_part[6];
+        char right_part[12];
         strncpy(right_part, found + 1, sizeof(right_part) - 1);
-        //right_part[sizeof(right_part) - 1] = '\0';
+        right_part[sizeof(right_part) - 1] = '\0';
 
         int left_num = atoi(left_part);
         int right_num = atoi(right_part);
